@@ -15,18 +15,13 @@ numbers = re.compile("|".join(number_dict))
 
 for i in range(0,len(list_of_lists)):
     p=list_of_lists[i][0]
-    print(p)
     list_of_lists[i][0]="".join(number_dict[w] for w in numbers.findall(p))
     p=list_of_lists[i][0]
-    print(p)
     q=[(i, c) for i, c in enumerate(p) if c.isdigit()] 
     if len(q)==1:
         k=int(q[0][1]+q[0][1])
-        print(k)
     else:
         k=int(q[0][1]+q[len(q)-1][1])
-        print(k)
     l=l+k
-    print("***********")
     
 print(l)
