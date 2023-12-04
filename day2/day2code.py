@@ -25,6 +25,3 @@ for i in range(0,len(list_of_lists)):
     l=l+k
     
 print(l)
-
-
-#print("".join(number_dict[w] for w in numbers.findall("two3four")))
