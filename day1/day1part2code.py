@@ -1,5 +1,5 @@
 #got help from this stackoverflow thread : https://stackoverflow.com/questions/70983144/how-to-convert-words-to-integer-in-python
-import re
+import regex as re
 
 a_file = open("day1input.txt", "r")
 list_of_lists = [((line.strip()).split()) for line in a_file]
@@ -18,10 +18,13 @@ for i in range(0,len(list_of_lists)):
     list_of_lists[i][0]="".join(number_dict[w] for w in numbers.findall(p))
     p=list_of_lists[i][0]
     q=[(i, c) for i, c in enumerate(p) if c.isdigit()] 
+    print(q)
     if len(q)==1:
         k=int(q[0][1]+q[0][1])
+        print(k)
     else:
         k=int(q[0][1]+q[len(q)-1][1])
+        print(k)
     l=l+k
     
 print(l)
